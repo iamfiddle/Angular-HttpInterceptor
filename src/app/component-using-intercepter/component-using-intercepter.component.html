@@ -1,0 +1,11 @@
+<h4 style="text-align:center;">Component - Using Interceptor</h4>
+<div class="example-button-row" style="text-align: center">
+    <button mat-raised-button class="primary" (click)="GetBookList()">GetData</button>
+</div>
+
+<app-progressbar></app-progressbar>
+
+<div *ngFor="let item of book; trackBy: trackByMethod">    
+    <h4>{{trackByMethod(item.id, item)}} - {{item.name}}</h4>
+    <p>{{item.description}}</p>
+</div>

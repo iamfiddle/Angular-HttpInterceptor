@@ -1,0 +1,9 @@
+<h4 style="text-align:center;">Component - Not Using Interceptor</h4>
+<div class="example-button-row" style="text-align: center;">
+    <button mat-raised-button class="primary" (click)="GetBookList()">GetData</button>
+</div>
+
+<div *ngFor="let item of book; let i=index" >
+    <h4>{{i+1}} - {{item.name}}</h4>
+    <p>{{item.description}}</p>
+</div>
